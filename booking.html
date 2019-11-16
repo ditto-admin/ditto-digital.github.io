@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jane Doe's Website">
+    <meta name="author" content="Ditto Digital">
+
+    <!-- Favicon link -->
+    <!-- IE 6-10 -->
+    <link rel="shortcut icon" href="../favicon.ico">
+    <!-- All other browsers -->
+    <link rel="icon" href="../favicon.ico">
+
+    <!--  CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Booking</title>
+  </head>
+
+  <body>
+    <!--  Nav -->
+    <nav class="navigation-container">
+      <div class="navigation">
+        <div class="logo-container">
+          <div class="logo">
+            <!-- TODO: Sliced logo, top collapses on scroll-->
+            <img src="img/logo/maldek-logo-full.svg" alt="" id="logo-full">
+            <img src="img/logo/maldek-logo-text.svg" alt="" id="logo-text">
+          </div>
+        </div>
+        <img id="mobile-menu-toggle" src="img/icons/icon_hamburger.svg">
+        <ul class="menu">
+          <li>
+            <a href="./home.html">Home<div class="selector-dot"></div></a>
+          </li>
+          <li>
+            <a href="./studio.html">Studio<div class="selector-dot"></div></a>
+          </li>
+          <li>
+            <a href="./listen.html">Listen<div class="selector-dot"></div></a>
+          </li>
+          <li class="selected">
+            <a href="#">Booking<div class="selector-dot"></div></a>
+          </li>
+          <li>
+            <a href="./lessons.html">Lessons<div class="selector-dot"></div></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--  Intro  -->
+    <section id="intro" class="intro content-fw booking-bg">
+      <div class="text-container">
+        <h1>Lets Make Something Together</h1>
+        <p>Fill out the booking form below to begin your relationship with Maldek Studios. We will respond within 24 hours of reaching out.</p>
+      </div>
+      <div class="read-more">More Info <img class="arrow" src="img/icons/arrow-more.svg"></div>
+
+    </section>
+    <!--  Page Content  -->
+    <section class = 'content columns is-multiline'>
+      <div class="column is-two-fifths">
+        <h2>Booking Form</h2>
+      </div>
+      <div class="column is-three-fifths">
+        <form class="form">
+          <!-- Name -->
+          <div class="columns form-group form-col-2">
+            <div class="column">
+              <label for="user_firstName">First Name<span class="required"></span></label>
+              <input name="user_firstName" placeholder="e.g. First Name">
+            </div>
+            <div class="column">
+              <label for="user_lastName">Last Name<span class="required"></span></label>
+              <input name="user_lastName">
+            </div>
+          </div>
+          <!-- Phone & Website -->
+          <div class="columns form-group form-col-2">
+            <div class="column">
+              <label for="user_phoneNumber">Phone Number<span>Optional</span></label>
+              <input name="user_phoneNumber">
+            </div>
+            <div class="column">
+              <label for="user_phoneNumber">Website<span>Optional</span></label>
+              <input name="user_website">
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="columns form-group">
+            <div class="column">
+              <label for="user_email">Email<span class="required"></span></label>
+              <input name="user_email">
+            </div>
+          </div>
+          <!-- Services Required -->
+          <div class="form-group">
+            <label>Services Required (Choose one or more)<span class="required"></span></label>
+            <div class="columns checkbox-group is-multiline is-tablet">
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="service_mixing">Mixing
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="service_mastering">Mastering
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="service_recording">Recording
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="service_podcasting">Podcasting
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="service_voiceOver">Voice-over
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="service_audioEditing">Audio Editing
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="service_studioMusicians">Studio Musicians
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="service_liveSound">Live Sound
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="service_other">Other
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- Additional Info -->
+          <div class="columns form-group">
+            <div class="column">
+              <label for="user_email">Additional Info<span>Optional</span></label>
+              <textarea name="user_email"></textarea>
+            </div>
+          </div>
+          <!-- Form Submit -->
+          <div class="columns form-submit">
+            <div class="column">
+              <button class="btn clear">Clear</button>
+              <button class="btn submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!--  Footer  -->
+    <footer class="footer-container">
+      <div class="footer cta columns">
+        <div class="column is-full">
+          <div class="animation"></div>
+          <div class="text">
+            <p>Ready to make the jump?</p>
+            <a href="#" class="btn">Work with Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer contact columns is-vcentered">
+        <div class="column is-one-third">
+          <div class="contact-info-wrapper">
+            <div class="contact-info">
+              <p><a class="address" href="#">123 Reverb St.<br>Charlotte, NC 20666</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <img src="img/logo/maldek-logo-planet.svg" alt="" class="logo">
+        </div>
+        <div class="column is-one-third">
+          <div class="contact-info-wrapper">
+            <div class="contact-info">
+              <h3>Contact Us</h3>
+              <p><a href="#">info@maldekstudios.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer info columns">
+        <div class="column is-full">
+          <p>&copy; 2019 Maldek Studios | Designed by <a href="#">ditto</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- ===== Bundled JS from /src files ===== -->
+    <script type="text/javascript" src="js/bundle.js"></script>
+  </body>
+
+</html>

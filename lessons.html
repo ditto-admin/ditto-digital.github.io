@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jane Doe's Website">
+    <meta name="author" content="Ditto Digital">
+
+    <!-- Favicon link -->
+    <!-- IE 6-10 -->
+    <link rel="shortcut icon" href="../favicon.ico">
+    <!-- All other browsers -->
+    <link rel="icon" href="../favicon.ico">
+
+    <!--  CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Lessons</title>
+  </head>
+
+  <body>
+    <!--  Nav -->
+    <nav class="navigation-container">
+      <div class="navigation">
+        <div class="logo-container">
+          <div class="logo">
+            <!-- TODO: Sliced logo, top collapses on scroll-->
+            <img src="img/logo/maldek-logo-full.svg" alt="" id="logo-full">
+            <img src="img/logo/maldek-logo-text.svg" alt="" id="logo-text">
+          </div>
+        </div>
+        <img id="mobile-menu-toggle" src="img/icons/icon_hamburger.svg">
+        <ul class="menu">
+          <li>
+            <a href="./home.html">Home<div class="selector-dot"></div></a>
+          </li>
+          <li>
+            <a href="./studio.html">Studio<div class="selector-dot"></div></a>
+          </li>
+          <li>
+            <a href="./listen.html">Listen<div class="selector-dot"></div></a>
+          </li>
+          <li>
+            <a href="./booking.html">Booking<div class="selector-dot"></div></a>
+          </li>
+          <li class="selected">
+            <a href="#">Lessons<div class="selector-dot"></div></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--  Intro  -->
+    <section id="intro" class="intro content-fw lessons-bg">
+      <div class="text-container">
+        <h1>Come Learn With Us</h1>
+        <p>Practice makes perfect, and we are here to help! Fill out our lessons form below to get started with our music lesson services.</p>
+      </div>
+      <div class="read-more">More Info <img class="arrow" src="img/icons/arrow-more.svg"></div>
+
+    </section>
+    <!--  Page Content  -->
+    <section class="content columns" style="text-align:center;"> <!--  NOTE: IN LINE STYLING  -->
+      <div class='column is-one-fifth'>
+        <img class="image icon" src="img/icons/icon_piano.svg" alt=""></img>
+        <p>Piano</p>
+      </div>
+      <div class='column is-one-fifth'>
+        <img class="image icon" src="img/icons/icon_trumpet.svg" alt=""></img>
+        <p>Trumpet</p>
+      </div>
+      <div class='column is-one-fifth'>
+        <img class="image icon" src="img/icons/icon_drum.svg" alt=""></img>
+        <p>Drums</p>
+      </div>
+      <div class='column is-one-fifth'>
+        <img class="image icon" src="img/icons/icon_flute.svg" alt=""></img>
+        <p>Flute</p>
+      </div>
+      <div class='column is-one-fifth'>
+        <img class="image icon" src="img/icons/icon_sax.svg" alt=""></img>
+        <p>Saxaphone</p>
+      </div>
+    </section>
+    <section class="content columns">
+      <div class="column is-two-fifths">
+        <h2>It's never too late to learn</h2>
+      </div>
+      <div class="column is-three-fifths">
+        <p class="lead">Maldek is here to empower your musical skills</p>
+        <p>Not ready to record your hit album yet? We’ve got you covered. Fill out our lessons form to get started with one of our music educators and begin your musical journey. We offer lessons for a variety of instruments from people who have been playing music most of their lives. Let us help you become the musician you’ve always wanted to be.</p>
+      </div>
+    </section>
+    <section class="content columns is-center">
+      <!-- LEFT (Text) -->
+      <div class="column is-two-fifths">
+        <h2>Teachers</h2>
+      </div>
+      <!-- RIGHT (Cards) -->
+      <div class="column is-three-fifths">
+        <a href="#" class="card-container">
+          <div class="card">
+            <img src="img/icons/icon_avatar.svg">
+            <h3 class="title">Eden Sloop</h3>
+            <p class="label">Piano, Trumpet, Flute,<br>Vocal Lessons</p>
+          </div>
+        </a>
+        <a href="#" class="card-container">
+          <div class="card">
+            <img src="img/icons/icon_avatar.svg">
+            <h3 class="title">Matt Sloop</h3>
+            <p class="label">Drums</p>
+          </div>
+        </a>
+        <a href="#" class="card-container">
+          <div class="card">
+            <img src="img/icons/icon_avatar.svg">
+            <h3 class="title">Brian Gluf</h3>
+            <p class="label">Guitar, Saxaphone</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class = 'content columns is-multiline'>
+      <div class="column is-two-fifths">
+        <h2>Booking Form</h2>
+      </div>
+      <div class="column is-three-fifths">
+        <form class="form">
+          <!-- Name -->
+          <div class="columns form-group form-col-2">
+            <div class="column">
+              <label for="user_firstName">First Name<span class="required"></span></label>
+              <input name="user_firstName" placeholder="e.g. Jane">
+            </div>
+            <div class="column">
+              <label for="user_lastName">Last Name<span class="required"></span></label>
+              <input name="user_lastName" placeholder="e.g. Doe">
+            </div>
+          </div>
+          <!-- Phone & Website -->
+          <div class="columns form-group form-col-2">
+            <div class="column">
+              <label for="user_phoneNumber">Phone Number<span>Optional</span></label>
+              <input name="user_phoneNumber"  placeholder="e.g. 555-101-2323">
+            </div>
+            <div class="column">
+              <label for="user_phoneNumber">Website<span>Optional</span></label>
+              <input name="user_website" placeholder="Your website or portfolio, etc.">
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="columns form-group">
+            <div class="column">
+              <label for="user_email">Email<span class="required"></span></label>
+              <input name="user_email" placeholder="e.g. janedoe@email.com">
+            </div>
+          </div>
+          <!-- Instrument & Skill Level -->
+          <div class="columns form-group form-col-2">
+            <div class="column">
+              <label for="user_instrument">Instrument<span class="required"></span></label>
+              <select>
+                <option value="">Select Instrument</option>
+                <option value="instrument_1">Guitar</option>
+                <option value="instrument_1">Saxaphone</option>
+                <option value="instrument_1">Piano</option>
+                <option value="instrument_1">Flute</option>
+                <option value="instrument_1">Vocals</option>
+                <img src="img/icons/arrow-more.html">
+              </select>
+            </div>
+            <div class="column">
+              <label for="user_email">Skill Level<span class="required"></span></label>
+              <select>
+                <option value="">Select Skill Level</option>
+                <option value="skill_1">Beginner</option>
+                <option value="skill_2">Intermediate</option>
+                <option value="skill_3">Advanced</option>
+              </select>
+            </div>
+          </div>
+          <!-- Availablity -->
+          <div class="form-group">
+            <label>Available Days (Select all that apply)<span class="required"></span></label>
+            <div class="columns checkbox-group is-multiline is-tablet">
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="weekday_sun">Sunday
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="weekday_mon">Monday
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="weekday_tue">Tuesday
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="weekday_wed">Wednesday
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="weekday_thu">Thursday
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="weekday_fri">Friday
+                </label>
+              </div>
+              <div class="column is-one-third-desktop is-half-tablet">
+                <label class="checkbox">
+                  <input type="checkbox" name="weekday_sat">Saturday
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- Remote Sessions -->
+          <div class="columns form-group">
+            <div class="column">
+              <label class="checkbox" for="user_preferRemoteSession">
+                <input type="checkbox" name="user_preferRemoteSession">
+                I would like remote sessions (via Skype)
+              </label>
+
+            </div>
+          </div>
+          <!-- Additional Info -->
+          <div class="columns form-group">
+            <div class="column">
+              <label for="user_additionalInfo">
+                Additional Info<span>Optional</span>
+              </label>
+              <textarea name="user_additionalInfo"
+              placeholder="Tell us anything about yourself regarding your music interest, experience, and goals."></textarea>
+            </div>
+          </div>
+          <!-- Form Submit -->
+          <div class="columns form-submit">
+            <div class="column">
+              <button class="btn clear">Clear</button>
+              <button class="btn submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!--  Footer  -->
+    <footer class="footer-container">
+      <div class="footer cta columns">
+        <div class="column is-full">
+          <div class="animation">
+            <!-- animation will go here -->
+          </div>
+          <div class="text">
+            <p>Ready to make the jump?</p>
+            <a href="#" class="btn">Work with Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer contact columns is-vcentered">
+        <div class="column is-one-third">
+          <div class="contact-info-wrapper">
+            <div class="contact-info">
+              <p><a class="address" href="#">123 Reverb St.<br>Charlotte, NC 20666</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <img src="img/logo/maldek-logo-planet.svg" alt="" class="logo">
+        </div>
+        <div class="column is-one-third">
+          <div class="contact-info-wrapper">
+            <div class="contact-info">
+              <h3>Contact Us</h3>
+              <p><a href="#">info@maldekstudios.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer info columns">
+        <div class="column is-full">
+          <p>&copy; 2019 Maldek Studios | Designed by <a href="#">ditto</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- ===== Bundled JS from /src files ===== -->
+    <script type="text/javascript" src="js/bundle.js"></script>
+  </body>
+
+</html>
