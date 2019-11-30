@@ -20,171 +20,192 @@
   </head>
 
   <body>
+    <div class='loadbar'></div>
     <!--  Nav -->
-    <nav class="navigation-container">
-      <div class="navigation">
-        <div class="logo-container">
-          <div class="logo">
-            <!-- TODO: Sliced logo, top collapses on scroll-->
-            <img src="img/logo/maldek-logo-full.svg" alt="" id="logo-full">
-            <img src="img/logo/maldek-logo-text.svg" alt="" id="logo-text">
+    <div class='loadOverlay'></div>
+      <nav class="navigation-container">
+        <div class="navigation">
+          <div class="logo-container">
+            <div class="logo">
+              <!-- TODO: Sliced logo, top collapses on scroll-->
+              <a href='home.html'>
+                <img src="img/logo/maldek-logo-full.svg" alt="" id="logo-full">
+                <img src="img/logo/maldek-logo-text.svg" alt="" id="logo-text">
+              </a>
+            </div>
+          </div>
+          <div class='mobile-menu-toggle'>
+          <img class='hamburger' src="img/icons/icon_hamburger.svg">
+          <img class='x_close hide' src="img/icons/icon_X.svg">
+          </div>
+          <ul class="menu">
+            <li>
+              <a href="./home.html">Home<div class="selector-dot"></div></a>
+            </li>
+            <li>
+              <a href="./studio.html">Studio<div class="selector-dot"></div></a>
+            </li>
+            <li class="selected">
+              <a href="#">Listen<div class="selector-dot"></div></a>
+            </li>
+            <li>
+              <a href="./booking.html">Booking<div class="selector-dot"></div></a>
+            </li>
+            <li>
+              <a href="./lessons.html">Lessons<div class="selector-dot"></div></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!--  Intro  -->
+      <section id="intro" class="intro content-fw listen-bg">
+        <div class="text-container">
+          <h1>Our Work</h1>
+          <p>When it comes to audio production - the proof is in the sound. Browse our selected works from previous projects created at Maldek Studios.</p>
+        </div>
+        <a href='#scrollTo'>
+          <div class="read-more">More Info <img class="arrow" src="img/icons/arrow-more.svg"></div>
+        </a>
+      </section>
+      <!--  Page Content  -->
+      <div id="scrollTo"></div>
+      <section class = "content columns is-multiline">
+        <div class="column is-two-fifths">
+          <h2>Selected Works</h2>
+        </div>
+        <div class="column is-three-fifths">
+          <div class="sample">
+            <h3>King</h3>
+            <p>King is a British rock band formed in Lonton in 1870. Their classic line-up was Freddie Neptune (lead vocals and piano), Brian June (lead guitar and vocals), Roger Dodger (drums and vocals) and John Beacon (bass guitar). Usurped by Queen.</p>
+            <div class="actions">
+              <div class="artist-link">
+                <a href="#">Visit Website</a>
+              </div>
+              <div id="p-0" class="player">
+                <div class="player-playPause">
+                  <div class="player-icon play">
+                    <img class="svg" src="img/icons/play.svg">
+                    <img class="svg" src="img/icons/pause.svg">
+                  </div>
+                </div>
+                <div class="player-scrubber">
+                  <div class="scrubber-animation"></div>
+                  <div class="scrubber-control">
+                    <input type="range" step="any" class="scrubber" value="0">
+                  </div>
+                </div>
+                <div class="player-timestamp">
+                  <span class="timestamp-timeleft">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sample">
+            <h3>The Roly Polys</h3>
+            <p>The Roly Polys were an English rock band formed in Liverworth in 1802. With a line-up comprising John Melon, Paul McCarthy, George R.R. Martin and Rango Stirr, they are generally regarded as the most influential band of all time until similarly named The Beatles broke records.</p>
+            <div class="actions">
+              <div class="artist-link">
+                <a href="#">Visit Website</a>
+              </div>
+              <div id="p-0" class="player">
+                <div class="player-playPause">
+                  <div class="player-icon play">
+                    <img class="svg" src="img/icons/play.svg">
+                    <img class="svg" src="img/icons/pause.svg">
+                  </div>
+                </div>
+                <div class="player-scrubber">
+                  <div class="scrubber-animation"></div>
+                  <div class="scrubber-control">
+                    <input type="range" step="any" class="scrubber" value="0">
+                  </div>
+                </div>
+                <div class="player-timestamp">
+                  <span class="timestamp-timeleft">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sample">
+            <h3>Pre Malone</h3>
+            <p>Austin Richard Pre (born July 4, 1801), known professionally as Pre Malone, is an American rapper, singer, songwriter, and record producer. He has gained acclaim for blending musical genres including hip hop, pop, trap, and rock, his introspective songwriting, and his laconic vocal style. His great great great great great grandson, Post, is also a well known musician.</p>
+            <div class="actions">
+              <div class="artist-link">
+                <a href="#">Visit Website</a>
+              </div>
+              <div id="p-0" class="player">
+                <div class="player-playPause">
+                  <div class="player-icon play">
+                    <img class="svg" src="img/icons/play.svg">
+                    <img class="svg" src="img/icons/pause.svg">
+                  </div>
+                </div>
+                <div class="player-scrubber">
+                  <div class="scrubber-animation"></div>
+                  <div class="scrubber-control">
+                    <input type="range" step="any" class="scrubber" value="0">
+                  </div>
+                </div>
+                <div class="player-timestamp">
+                  <span class="timestamp-timeleft">0:00</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <img id="mobile-menu-toggle" src="img/icons/icon_hamburger.svg">
-        <ul class="menu">
-          <li>
-            <a href="./home.html">Home<div class="selector-dot"></div></a>
-          </li>
-          <li>
-            <a href="./studio.html">Studio<div class="selector-dot"></div></a>
-          </li>
-          <li class="selected">
-            <a href="#">Listen<div class="selector-dot"></div></a>
-          </li>
-          <li>
-            <a href="./booking.html">Booking<div class="selector-dot"></div></a>
-          </li>
-          <li>
-            <a href="./lessons.html">Lessons<div class="selector-dot"></div></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!--  Intro  -->
-    <section id="intro" class="intro content-fw listen-bg">
-      <div class="text-container">
-        <h1>Our Work</h1>
-        <p>When it comes to audio production - the proof is in the sound. Browse our selected works from previous projects created at Maldek Studios.</p>
-      </div>
-      <div class="read-more">More Info <img class="arrow" src="img/icons/arrow-more.svg"></div>
+      </section>
 
-    </section>
-    <!--  Page Content  -->
-    <section class = "content columns is-multiline">
-      <div class="column is-two-fifths">
-        <h2>Selected Works</h2>
-      </div>
-      <div class="column is-three-fifths">
-        <div class="sample">
-          <h3>King</h3>
-          <p>King is a British rock band formed in Lonton in 1870. Their classic line-up was Freddie Neptune (lead vocals and piano), Brian June (lead guitar and vocals), Roger Dodger (drums and vocals) and John Beacon (bass guitar). Usurped by Queen.</p>
-          <div class="actions">
-            <div class="artist-link">
-              <a href="#">Visit Website</a>
+      <!--  Footer  -->
+      <footer class="footer-container">
+        <div class="footer cta columns">
+          <div class="column is-full">
+            <div class="animation">
+              <!-- animation will go here -->
             </div>
-            <div id="p-0" class="player">
-              <div class="player-playPause">
-                <div class="player-icon play">
-                  <img class="svg" src="img/icons/play.svg">
-                  <img class="svg" src="img/icons/stop.svg">
-                </div>
+            <div class="text">
+              <p>Some text for the CTA</p>
+              <a href="#" class="btn">button</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer contact columns is-vcentered">
+          <div class="column is-one-third">
+            <div class="contact-info-wrapper">
+              <div class="contact-info">
+                <!-- TODO: Update address, add google maps link -->
+                <p><a class="address" href="#">123 Reverb St.<br>Charlotte, NC 20666</a></p>
               </div>
-              <div class="player-scrubber">
-                <div class="scrubber-animation"></div>
-                <div class="scrubber-control">
-                  <input type="range" step="any" class="scrubber" value="0">
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <a href="home.html"><img src="img/logo/maldek-logo-planet.svg" alt="" class="logo"></a>
+          </div>
+          <div class="column is-one-third">
+            <div class="contact-info-wrapper">
+              <div class="contact-info">
+                <p><a href="mailto:info@maldekstudios.com">info@maldekstudios.com</a></p>
+                <div class="social-media">
+                  <a href="#" alt="Facebook – @maldekstudios" title="Facebook – @maldekstudios">
+                    <img src="img/icons/social_facebook.svg" class="image icon social">
+                  </a>
+                  <a href="#" alt="Instagram – @maldekstudios" title="Instagram – @maldekstudios">
+                    <img src="img/icons/social_insta.svg" class="image icon social">
+                  </a>
+                  <a href="#" alt="Twitter – @maldekstudios" title="Twitter – @maldekstudios">
+                    <img src="img/icons/social_twitter.svg" class="image icon social">
+                  </a>
                 </div>
-              </div>
-              <div class="player-timestamp">
-                <span class="timestamp-timeleft">0:00</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="sample">
-          <h3>The Roly Polys</h3>
-          <p>The Roly Polys were an English rock band formed in Liverworth in 1802. With a line-up comprising John Melon, Paul McCarthy, George R.R. Martin and Rango Stirr, they are generally regarded as the most influential band of all time until similarly named The Beatles broke records.</p>
-          <div class="actions">
-            <div class="artist-link">
-              <a href="#">Visit Website</a>
-            </div>
-            <div id="p-0" class="player">
-              <div class="player-playPause">
-                <div class="player-icon play">
-                  <img class="svg" src="img/icons/play.svg">
-                  <img class="svg" src="img/icons/stop.svg">
-                </div>
-              </div>
-              <div class="player-scrubber">
-                <div class="scrubber-animation"></div>
-                <div class="scrubber-control">
-                  <input type="range" step="any" class="scrubber" value="0">
-                </div>
-              </div>
-              <div class="player-timestamp">
-                <span class="timestamp-timeleft">0:00</span>
-              </div>
-            </div>
+        <div class="footer info columns">
+          <div class="column is-full">
+            <p>&copy; 2019 Maldek Studios | Designed by <a href="#">ditto</a></p>
           </div>
         </div>
-        <div class="sample">
-          <h3>Pre Malone</h3>
-          <p>Austin Richard Pre (born July 4, 1801), known professionally as Pre Malone, is an American rapper, singer, songwriter, and record producer. He has gained acclaim for blending musical genres including hip hop, pop, trap, and rock, his introspective songwriting, and his laconic vocal style. His great great great great great grandson, Post, is also a well known musician.</p>
-          <div class="actions">
-            <div class="artist-link">
-              <a href="#">Visit Website</a>
-            </div>
-            <div id="p-0" class="player">
-              <div class="player-playPause">
-                <div class="player-icon play">
-                  <img class="svg" src="img/icons/play.svg">
-                  <img class="svg" src="img/icons/stop.svg">
-                </div>
-              </div>
-              <div class="player-scrubber">
-                <div class="scrubber-animation"></div>
-                <div class="scrubber-control">
-                  <input type="range" step="any" class="scrubber" value="0">
-                </div>
-              </div>
-              <div class="player-timestamp">
-                <span class="timestamp-timeleft">0:00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </footer>
 
-    <!--  Footer  -->
-    <footer class="footer-container">
-      <div class="footer cta columns">
-        <div class="column is-full">
-          <div class="animation">
-            <!-- animation will go here -->
-          </div>
-          <div class="text">
-            <p>Ready to make the jump?</p>
-            <a href="booking.html" class="btn">Work with Us</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer contact columns is-vcentered">
-        <div class="column is-one-third">
-          <div class="contact-info-wrapper">
-            <div class="contact-info">
-              <p><a class="address" href="#">123 Reverb St.<br>Charlotte, NC 20666</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <img src="img/logo/maldek-logo-planet.svg" alt="" class="logo">
-        </div>
-        <div class="column is-one-third">
-          <div class="contact-info-wrapper">
-            <div class="contact-info">
-              <h3>Contact Us</h3>
-              <p><a href="#">info@maldekstudios.com</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer info columns">
-        <div class="column is-full">
-          <p>&copy; 2019 Maldek Studios | Designed by <a href="#">ditto</a></p>
-        </div>
-      </div>
-    </footer>
 
 
     <!-- ===== Bundled JS from /src files ===== -->

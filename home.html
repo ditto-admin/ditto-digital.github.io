@@ -20,137 +20,189 @@
   </head>
 
   <body>
+    <div class='loadbar'></div>
     <!--  Nav -->
-    <nav class="navigation-container">
-      <div class="navigation">
-        <div class="logo-container">
-          <div class="logo">
-            <!-- TODO: Sliced logo, top collapses on scroll-->
-            <img src="img/logo/maldek-logo-full.svg" alt="" id="logo-full">
-            <img src="img/logo/maldek-logo-text.svg" alt="" id="logo-text">
-          </div>
-        </div>
-        <img id="mobile-menu-toggle" src="img/icons/icon_hamburger.svg">
-        <ul class="menu">
-          <li class="selected">
-            <a href="#">Home<div class="selector-dot"></div></a>
-          </li>
-          <li>
-            <a href="./studio.html">Studio<div class="selector-dot"></div></a>
-          </li>
-          <li>
-            <a href="./listen.html">Listen<div class="selector-dot"></div></a>
-          </li>
-          <li>
-            <a href="./booking.html">Booking<div class="selector-dot"></div></a>
-          </li>
-          <li>
-            <a href="./lessons.html">Lessons<div class="selector-dot"></div></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!--  Intro  -->
-    <section id="intro-home" class="intro content-fw home-bg">
-      <div class="text-container">
-        <h1><span>We are</span> Maldek Studios</h1>
-        <p>Our goal is to provide an accessible creative environment for your projects while still maintaining professional audio production services.</p>
-      </div>
-      <div class="read-more">More Info <img class="arrow" src="img/icons/arrow-more.svg"></div>
-
-    </section>
-    <!--  Page Content  -->
-    <section class="content columns">
-      <div class="column is-4-tablet is-two-fifths">
-        <h2>About Us</h2>
-      </div>
-      <div class="column is-8-tablet is-three-fifths">
-        <p class="lead">Maldek is here to empower your musical vision.</p>
-        <p>Maldek began as a do it yourself recording studio project from the mind and resources of electronic recording arts graduates. Over time it has been built out into a proffesional grade recording studio. Now it is time to share the space with other like minded individuals interested in furthering their musical careers. Whether it is recording demos, mastering a multi-year long album project, or picking up some guitar lessons - Maldek is here to empower your musical vision.</p>
-      </div>
-    </section>
-    <section class="content columns is-center">
-      <!-- LEFT (Text) -->
-      <div class="column is-4-tablet is-two-fifths">
-        <h2>Our Services</h2>
-      </div>
-      <!-- RIGHT (Cards) -->
-      <div class="column is-12-mobile is-8-tablet is-three-fifths">
-        <a href="booking.html" class="card-container">
-          <div class="card">
-            <img src="img/icons/icon_interface.svg">
-            <h3 class="title">Audio Production</h3>
-            <p class="label">Recording, Mastering,<br>Mixing, and more</p>
-          </div>
-        </a>
-        <a href="lessons.html" class="card-container">
-          <div class="card">
-            <img src="img/icons/icon_lessons.svg">
-            <h3 class="title">Music Lessons</h3>
-            <p class="label">Guitar, Drums, Piano,<br>Sax, Flute, Vocals</p>
-          </div>
-        </a>
-      </div>
-    </section>
-    <!-- LESSONS CTA -->
-    <section class="content columns">
-      <div class="column">
-        <div class="text-overlay">
-          <div class="columns text light">
-            <div class="column is-4-tablet is-two-fifths">
-              <h2>Lessons</h2>
+    <div class='loadOverlay'></div>
+      <nav class="navigation-container">
+        <div class="navigation">
+          <div class="logo-container">
+            <div class="logo">
+              <!-- TODO: Sliced logo, top collapses on scroll-->
+              <a href='home.html'>
+                <img src="img/logo/maldek-logo-full.svg" alt="" id="logo-full">
+                <img src="img/logo/maldek-logo-text.svg" alt="" id="logo-text">
+              </a>
             </div>
-            <div class="column is-8-tablet is-three-fifths">
-              <p>It is never too late to begin your musical journey. Here at Maldek we offer lessons for a multitude of instruments within a private studio environment. Work with one of our talented music educators to take your playing to the next level.</p>
-              <div class="cta">
-                <a href="lessons.html" class="mt-1 btn">Lessons Form</a>
+          </div>
+          <div class='mobile-menu-toggle'>
+          <img class='hamburger' src="img/icons/icon_hamburger.svg">
+          <img class='x_close hide' src="img/icons/icon_X.svg">
+          </div>
+          <ul class="menu">
+            <li class="selected">
+              <a href="./home.html">Home<div class="selector-dot"></div></a>
+            </li>
+            <li>
+              <a href="./studio.html">Studio<div class="selector-dot"></div></a>
+            </li>
+            <li>
+              <a href="./listen.html">Listen<div class="selector-dot"></div></a>
+            </li>
+            <li>
+              <a href="./booking.html">Booking<div class="selector-dot"></div></a>
+            </li>
+            <li>
+              <a href="./lessons.html">Lessons<div class="selector-dot"></div></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+        <!--  Intro  -->
+      <section id="intro-home" class="intro content-fw home-bg">
+        <div class="text-container">
+          <h1><span>We are</span> Maldek Studios</h1>
+          <p>Our goal is to provide an accessible creative environment for your projects while still maintaining professional audio production services.</p>
+        </div>
+        <a href='#scrollTo'>
+          <div class="read-more">More Info <img class="arrow" src="img/icons/arrow-more.svg"></div>
+        </a>
+      </section>
+      <!--  Page Content  -->
+      <div id="scrollTo"></div>
+      <section class="content columns">
+        <div class="column is-4-tablet is-two-fifths">
+          <h2>About Us</h2>
+        </div>
+        <div class="column is-8-tablet is-three-fifths">
+          <p class="lead">Maldek is here to empower your musical vision.</p>
+          <p>Maldek began as a do it yourself recording studio project from the mind and resources of electronic recording arts graduates. Over time it has been built out into a proffesional grade recording studio. Now it is time to share the space with other like minded individuals interested in furthering their musical careers. Whether it is recording demos, mastering a multi-year long album project, or picking up some guitar lessons - Maldek is here to empower your musical vision.</p>
+        </div>
+      </section>
+      <!-- STUDIO CTA -->
+      <section class="content columns">
+        <div class="column is-4-tablet is-two-fifths">
+          <h2>The Studio</h2>
+        </div>
+        <div class="column is-8-tablet is-three-fifths">
+          <div class="text-overlay studio-cta small">
+            <div class="columns text light is-multiline">
+              <div class="column is-two-thirds is-full-tablet">
+                <p>Check out our super cool adjective and stuff about our studio space. Maybe even two sentences but let’s not get crazy.</p>
+              </div>
+              <div class="column is-one-third-desktop is-full">
+                <div class="cta">
+                  <a href="studio.html" class="btn">See Studio</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!--  Footer  -->
-    <footer class="footer-container">
-      <div class="footer cta columns">
-        <div class="column is-full">
-          <div class="animation">
-            <!-- animation will go here -->
-          </div>
-          <div class="text">
-            <p>Ready to make the Jump?</p>
-            <a href="booking.html" class="btn">Work with Us</a>
-          </div>
+      </section>
+      <!-- SERVICES Cards -->
+      <section class="content columns is-center">
+        <!-- LEFT (Text) -->
+        <div class="column is-4-tablet is-two-fifths">
+          <h2>Our Services</h2>
         </div>
-      </div>
-      <div class="footer contact columns is-vcentered">
-        <div class="column is-one-third">
-          <div class="contact-info-wrapper">
-            <div class="contact-info">
-              <p><a class="address" href="#">123 Reverb St.<br>Charlotte, NC 20666</a></p>
+        <!-- RIGHT (Cards) -->
+        <div class="column is-12-mobile is-8-tablet is-three-fifths">
+          <a href="booking.html" class="card-container">
+            <div class="card">
+              <img class="image icon" src="img/icons/icon_interface.svg">
+              <h3 class="title">Audio Production</h3>
+              <p class="label">Recording, Mastering,<br>Mixing, and more</p>
+            </div>
+          </a>
+          <a href="lessons.html" class="card-container">
+            <div class="card">
+              <img class="image icon" src="img/icons/icon_lessons.svg">
+              <h3 class="title">Music Lessons</h3>
+              <p class="label">Guitar, Drums, Piano,<br>Sax, Flute, Vocals</p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <!-- LESSONS CTA -->
+      <section class="content columns">
+        <div class="column">
+          <div class="text-overlay lessons-cta">
+            <div class="columns text light">
+              <div class="column is-4-tablet is-two-fifths">
+                <h2>Lessons</h2>
+              </div>
+              <div class="column is-8-tablet is-three-fifths">
+                <p>It is never too late to begin your musical journey. Here at Maldek we offer lessons for a multitude of instruments within a private studio environment. Work with one of our talented music educators to take your playing to the next level.</p>
+                <div class="cta">
+                  <a href="lessons.html" class="mt-1 btn">Lessons Form</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="column is-one-third">
-          <img src="img/logo/maldek-logo-planet.svg" alt="" class="logo">
-        </div>
-        <div class="column is-one-third">
-          <div class="contact-info-wrapper">
-            <div class="contact-info">
-              <h3>Contact Us</h3>
-              <p><a href="#">info@maldekstudios.com</a></p>
-            </div>
+        </section>
+        <!-- SOCIAL MEDIA Links -->
+        <div class="content fw social-media columns is-centered is-multiline bg-titanium_gray">
+          <div class="column center">
+            <a href="#" alt="Facebook – @maldekstudios" title="Facebook – @maldekstudios">
+              <img src="img/icons/social_facebook.svg" class="image icon social">
+            </a>
+            <a href="#" alt="Instagram – @maldekstudios" title="Instagram – @maldekstudios">
+              <img src="img/icons/social_insta.svg" class="image icon social">
+            </a>
+            <a href="#" alt="Twitter – @maldekstudios" title="Twitter – @maldekstudios">
+              <img src="img/icons/social_twitter.svg" class="image icon social">
+            </a>
           </div>
         </div>
-      </div>
-      <div class="footer info columns">
-        <div class="column is-full">
-          <p>&copy; 2019 Maldek Studios | Designed by <a href="#">ditto</a></p>
-        </div>
-      </div>
-    </footer>
-
+        <!--  Footer  -->
+        <footer class="footer-container">
+          <div class="footer cta columns">
+            <div class="column is-full">
+              <div class="animation">
+                <!-- animation will go here -->
+              </div>
+              <div class="text">
+                <p>Some text for the CTA</p>
+                <a href="#" class="btn">button</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer contact columns is-vcentered">
+            <div class="column is-one-third">
+              <div class="contact-info-wrapper">
+                <div class="contact-info">
+                  <!-- TODO: Update address, add google maps link -->
+                  <p><a class="address" href="#">123 Reverb St.<br>Charlotte, NC 20666</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <a href="home.html"><img src="img/logo/maldek-logo-planet.svg" alt="" class="logo"></a>
+            </div>
+            <div class="column is-one-third">
+              <div class="contact-info-wrapper">
+                <div class="contact-info">
+                  <p><a href="mailto:info@maldekstudios.com">info@maldekstudios.com</a></p>
+                  <div class="social-media">
+                    <a href="#" alt="Facebook – @maldekstudios" title="Facebook – @maldekstudios">
+                      <img src="img/icons/social_facebook.svg" class="image icon social">
+                    </a>
+                    <a href="#" alt="Instagram – @maldekstudios" title="Instagram – @maldekstudios">
+                      <img src="img/icons/social_insta.svg" class="image icon social">
+                    </a>
+                    <a href="#" alt="Twitter – @maldekstudios" title="Twitter – @maldekstudios">
+                      <img src="img/icons/social_twitter.svg" class="image icon social">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer info columns">
+            <div class="column is-full">
+              <p>&copy; 2019 Maldek Studios | Designed by <a href="#">ditto</a></p>
+            </div>
+          </div>
+        </footer>
 
 
     <!-- ===== Bundled JS from /src files ===== -->
