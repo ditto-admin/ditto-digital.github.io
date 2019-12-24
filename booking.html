@@ -71,47 +71,53 @@
       <div id="scrollTo"></div>
       <section class = 'content columns is-multiline'>
         <div class="column is-two-fifths">
-          <h2>Booking Form</h2>
+          <h2>Create with Us</h2>
         </div>
         <div class="column is-three-fifths">
           <!--  FORM START  -->
-          <form id="form-booking" class="form gform notSubmitted" method="post" data-email="gluf.matt@gmail.com"
-          action="https://script.google.com/macros/s/AKfycbwFZGxNvQy3kUKujP4zJj4tXnshTKPc0ezMs4c0T9yPuenub6OX/exec">
-
+          <form id="form-booking" class="form gform notSubmitted" method="post"
+          data-email="dittodcs@gmail.com"
+          action="https://script.google.com/macros/s/AKfycbwFZGxNvQy3kUKujP4zJj4tXnshTKPc0ezMs4c0T9yPuenub6OX/exec"
+          novalidate>
             <!-- Name -->
             <div class = 'form_hide'>
               <div class="columns form-group form-col-2">
                 <div class="column">
-                  <label for="user_firstName">First Name<span class="required"></span></label>
-                  <input name="user_firstName" placeholder="e.g. First Name">
+                  <label for="user_firstName">First Name<span class="required">Required</span></label>
+                  <input type ="text" name="user_firstName" placeholder="e.g. Jane" required>
+                  <div class="error-message">Please enter your first name.</div>
                 </div>
                 <div class="column">
-                  <label for="user_lastName">Last Name<span class="required"></span></label>
-                  <input name="user_lastName">
+                  <label for="user_lastName">Last Name<span class="required">Required</span></label>
+                  <input type ="text" name="user_lastName" placeholder="e.g. Doe" required>
+                  <div class="error-message">Please enter your last name.</div>
                 </div>
               </div>
               <!-- Phone & Website -->
               <div class="columns form-group form-col-2">
                 <div class="column">
                   <label for="user_phoneNumber">Phone Number<span>Optional</span></label>
-                  <input name="user_phoneNumber">
+                  <input type ="tel" name="user_phoneNumber" placeholder="e.g. 555-101-2323" >
+                  <div class="error-message">Please enter a valid phone number.</div>
                 </div>
                 <div class="column">
-                  <label for="user_phoneNumber">Website<span>Optional</span></label>
-                  <input name="user_website">
+                  <label for="user_website">Website<span>Optional</span></label>
+                  <input type ="text" name="user_website" placeholder="Your website or portfolio, etc.">
                 </div>
               </div>
               <!-- Email -->
               <div class="columns form-group">
                 <div class="column">
-                  <label for="user_email">Email<span class="required"></span></label>
-                  <input name="user_email">
+                  <label for="user_email">Email<span class="required">Required</span></label>
+                  <input type="email" name="user_email" placeholder="e.g. janedoe@email.com" required>
+                  <div class="error-message">Please enter a valid email address.</div>
                 </div>
               </div>
               <!-- Services Required -->
-              <div class="form-group">
-                <label>Services Required (Choose one or more)<span class="required"></span></label>
-                <div class="columns checkbox-group is-multiline is-tablet">
+              <div class="form-group checkbox-group" data-name="service_checkbox_group">
+                <label>Services Required (Choose one or more)<span class="required">Required</span></label>
+                <div class="error-message">Please select at least one choice.</div>
+                <div class="columns is-multiline is-tablet" >
                   <div class="column is-one-third-desktop is-half-tablet">
                     <label class="checkbox">
                       <input type="checkbox" name="service_mixing">Mixing
@@ -159,48 +165,58 @@
                   </div>
                 </div>
               </div>
+              <!-- Referral -->
+              <div class="form-group">
+                <label for="user_referral">Referral<span class="required">Required</span></label>
+                <div class="column is one-third-desktop is-half-tablet">
+                  <select name="user_referral" required>
+                    <option disabled value="" selected>Select a source</option>
+                    <optgroup label="Sources">
+                      <option value="social_media">Social Media</option>
+                      <option value="online_ad">Advertisement</option>
+                      <option value="word_of_mouth">Word of Mouth</option>
+                      <option value="other">Other</option>
+                    </optgroup>
+                    <optgroup label="Maldek Team">
+                      <option value="brian">Brian Gluf</option>
+                      <option value="jeff">Jeff Small</option>
+                      <option value="matt">Matt Sloop</option>
+                      <option value="eden">Eden Sloop</option>
+                    </optgroup>
+                  </select>
+                  <div class="error-message">Please let us know how you heard about us!</div>
+                </div>
+              </div>
               <!-- Additional Info -->
               <div class="columns form-group">
                 <div class="column">
                   <label for="user_moreInfo">Additional Info<span>Optional</span></label>
-                  <textarea name="user_moreInfo"></textarea>
+                  <textarea name="user_moreInfo" placeholder="Anything else you want to tell us? We'd love to hear it!"></textarea>
                 </div>
               </div>
               <!-- Form Submit -->
               <div class="columns form-submit">
                 <div class="column">
-                  <button class="btn clear">Clear</button>
-                  <button class="btn submit">Submit</button>
+                  <button class="btn clear" type="reset">Clear</button>
+                  <button class="btn submit" type="submit">Submit</button>
                 </div>
               </div>
             </div>
-            <div style="display:none" class="thankyou_message">
-               <!-- You can customize the thankyou message by editing the code below -->
-               <h3>Thank you for Contacting Us!<br>We will get back to you soon.</h3>
-               <button class="btn reSubmit">Submit Again</button>
-            </div>
           </form>
+          <div class="columns form-confirmation">
+             <h3>Thank you for Contacting Us!<br>We will get back to you soon.</h3>
+             <button type="button" class="btn resubmit">Submit Again</button>
+          </div>
         </div>
       </section>
       <!--  Footer  -->
       <footer class="footer-container">
-        <div class="footer cta columns" style="display: none;">
-          <div class="column is-full">
-            <div class="animation">
-              <!-- animation will go here -->
-            </div>
-            <div class="text">
-              <p>Some text for the CTA</p>
-              <a href="#" class="btn">button</a>
-            </div>
-          </div>
-        </div>
         <div class="footer contact columns is-vcentered">
           <div class="column is-one-third">
             <div class="contact-info-wrapper">
               <div class="contact-info">
-                <!-- TODO: Update address, add google maps link -->
-                <p><a class="address" href="#">123 Reverb St.<br>Charlotte, NC 20666</a></p>
+                <h3>Contact Us</h3>
+                <p><a href="mailto:info@maldekstudios.com">info@maldekstudios.com</a></p>
               </div>
             </div>
           </div>
@@ -210,15 +226,15 @@
           <div class="column is-one-third">
             <div class="contact-info-wrapper">
               <div class="contact-info">
-                <p><a href="mailto:info@maldekstudios.com">info@maldekstudios.com</a></p>
+                <h3>Follow Us</h3>
                 <div class="social-media">
-                  <a href="#" alt="Facebook – @maldekstudios" title="Facebook – @maldekstudios">
+                  <a href="https://www.facebook.com/maldekstudios/" alt="Facebook – @maldekstudios" title="Facebook – @maldekstudios">
                     <img src="img/icons/social_facebook.svg" class="image icon social">
                   </a>
-                  <a href="#" alt="Instagram – @maldekstudios" title="Instagram – @maldekstudios">
+                  <a href="https://www.instagram.com/maldekstudios/?hl=en" alt="Instagram – @maldekstudios" title="Instagram – @maldekstudios">
                     <img src="img/icons/social_insta.svg" class="image icon social">
                   </a>
-                  <a href="#" alt="Twitter – @maldekstudios" title="Twitter – @maldekstudios">
+                  <a href="https://twitter.com/maldekstudios" alt="Twitter – @maldekstudios" title="Twitter – @maldekstudios">
                     <img src="img/icons/social_twitter.svg" class="image icon social">
                   </a>
                 </div>
@@ -228,14 +244,14 @@
         </div>
         <div class="footer info columns">
           <div class="column is-full">
-            <p>&copy; 2019 Maldek Studios | Designed by <a href="#">ditto</a></p>
+            <p>&copy; 2019 Maldek Studios | Designed by <a href="#">ditto</a> | Photography by <a href="http://coastrightimages.com/" target="_blank">Coast Right Images</a></p>
           </div>
         </div>
       </footer>
 
-
     <!-- ===== Bundled JS from /src files ===== -->
     <script type="text/javascript" src="js/bundle.js"></script>
+    <!-- <script type="text/javascript" src="js/form_submission.js"></script> -->
   </body>
 
 </html>

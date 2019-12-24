@@ -7,7 +7,6 @@
       left: 0,
       top: element.offsetTop
     });
-    console
   }
 
   //hide form after submission
@@ -71,7 +70,7 @@
     // add form-specific values into the data
     formData.formDataNameOrder = JSON.stringify(fields);
     formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
-    formData.formGoogleSend
+    formData.formGoogleSendEmail
       = form.dataset.email || ""; // no email by default
 
     return {data: formData, honeypot: honeypot};
@@ -111,6 +110,7 @@
     var encoded = Object.keys(data).map(function(k) {
         return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
     }).join('&');
+    console.log(data);
     xhr.send(encoded);
   }
 

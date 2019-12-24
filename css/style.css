@@ -1192,6 +1192,9 @@
 html {
   background-color: #FFFFFF; }
 
+.hide {
+  display: none; }
+
 @keyframes loadOverlay {
   0% {
     opacity: 1; }
@@ -1413,6 +1416,11 @@ html {
     display: block;
     width: 60%;
     margin: auto auto; }
+    @media (max-width: 575.98px) {
+      .footer.contact img.logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 45%; } }
   .footer.contact .social-media {
     margin-top: 24px; }
     .footer.contact .social-media .social.icon {
@@ -1468,8 +1476,8 @@ html {
   .btn.submit {
     color: #FFFFFF;
     background-color: #398FD0; }
-  .btn.reSubmit {
-    margin-top: 10px;
+  .btn.resubmit {
+    margin-top: 24px;
     color: #FFFFFF;
     background-color: #398FD0; }
   .btn.clear {
@@ -1480,16 +1488,21 @@ html {
     transform: scale(1.025);
     cursor: pointer; }
 
-button.submit, button.clear {
+button.submit, button.clear, button.resubmit {
   transition: 0.2s ease-in-out;
   font-size: 1.4rem;
-  border: 0;
-  font-size: 1rem; }
+  font-size: 1rem;
+  border: 2px solid white; }
+  button.submit:hover, button.clear:hover, button.resubmit:hover {
+    border-bottom: 2px solid white; }
+  button.submit:focus, button.clear:focus, button.resubmit:focus {
+    outline: none;
+    border: 2px solid #21272C; }
 
 button.submit:hover {
   background-color: #62a6da; }
 
-button.reSubmit:hover {
+button.resubmit:hover {
   background-color: #62a6da; }
 
 button.clear:hover {
@@ -1502,7 +1515,7 @@ button.clear:hover {
   transition: 0.2s ease-in-out;
   border: 0;
   width: calc(50% - 20px); }
-  .card-container:last-of-type {
+  .card-container:nth-of-type(2) {
     margin-right: 0; }
   .card-container:hover {
     transform: scale(1.025);
@@ -1559,11 +1572,39 @@ button.clear:hover {
   .card:hover {
     border-color: #398FD0; }
 
-.thankyou_message {
-  text-align: center; }
+form.form.submitted input:invalid + .error-message,
+form.form.submitted select:invalid + .error-message,
+form.form.submitted label.error + .error-message {
+  display: block; }
+
+form.form.submitted input:invalid, form.form.submitted select:invalid {
+  border-color: #D03939; }
+
+form.form.submitted .checkbox-group .error-message {
+  margin-top: -8px;
+  margin-bottom: 12px; }
+
+form.form.submitted .error-message {
+  color: #D03939;
+  font-size: .9rem;
+  margin-top: -26px;
+  margin-bottom: 16px; }
+
+.form-confirmation {
+  display: none !important;
+  margin-bottom: 24px; }
+  .form-confirmation.show {
+    display: block !important; }
+
+form.form.hide {
+  display: none; }
+
+form.form .error-message {
+  display: none; }
 
 form.form .form-group {
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  transition: 0.4s ease-in; }
   form.form .form-group input:not([type="checkbox"]), form.form .form-group select, form.form .form-group textarea {
     margin-bottom: 36px !important; }
     @media (min-width: 767.98px) {
@@ -1572,6 +1613,13 @@ form.form .form-group {
   @media (min-width: 767.98px) {
     form.form .form-group {
       margin-bottom: 50px; } }
+
+form.form .form-group.hide {
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  position: relative;
+  z-index: -100; }
 
 form.form .form-submit {
   margin-bottom: 10vh; }
@@ -1588,18 +1636,19 @@ form.form .form-col-2 input, form.form .form-col-2 select {
       margin-bottom: 0px;
       width: 92%; } }
 
-form.form .form-col-2 .column:nth-of-type(2) select, form.form .form-col-2 .column:nth-of-type(2) label, form.form .form-col-2 .column:nth-of-type(2) input {
+form.form .form-col-2 .column:nth-of-type(2) select, form.form .form-col-2 .column:nth-of-type(2) label, form.form .form-col-2 .column:nth-of-type(2) input, form.form .form-col-2 .column:nth-of-type(2) .error-message {
   margin-left: 0; }
   @media (min-width: 767.98px) {
-    form.form .form-col-2 .column:nth-of-type(2) select, form.form .form-col-2 .column:nth-of-type(2) label, form.form .form-col-2 .column:nth-of-type(2) input {
+    form.form .form-col-2 .column:nth-of-type(2) select, form.form .form-col-2 .column:nth-of-type(2) label, form.form .form-col-2 .column:nth-of-type(2) input, form.form .form-col-2 .column:nth-of-type(2) .error-message {
       margin-left: 8%; } }
 
 form.form .checkbox-group > div {
   margin-bottom: 16px; }
 
 form.form label.checkbox {
-  display: inline;
-  font-family: "metropolis-medium", Helvetica, Arial, sans-serif; }
+  display: inline-block;
+  font-family: "metropolis-medium", Helvetica, Arial, sans-serif;
+  margin: 2px 0 10px; }
   form.form label.checkbox:hover {
     cursor: pointer;
     user-select: none; }
@@ -1614,6 +1663,12 @@ form.form label {
     font-size: 0.9rem;
     font-style: italic;
     font-family: "metropolis-medium", Helvetica, Arial, sans-serif; }
+  form.form label span.required {
+    display: none;
+    font-style: normal;
+    color: #D03939; }
+  form.form label.error span.required {
+    display: inline; }
 
 form.form input, form.form textarea, form.form select {
   box-sizing: border-box;
@@ -1652,6 +1707,47 @@ form.form input[type="checkbox"] {
     background-color: #398FD0; }
   form.form input[type="checkbox"]:hover {
     cursor: pointer; }
+
+form.form .parent {
+  margin: 9px 0 24px; }
+
+form.form .weekday input[type="checkbox"]:not(:checked),
+form.form .weekday input[type="checkbox"]:checked {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  opacity: 0; }
+
+form.form input[type="checkbox"] + label.weekday_checkbox {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  background-color: #A0A0A0;
+  border: 2px solid #A0A0A0;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 50px; }
+
+form.form input[type="checkbox"]:checked + label.weekday_checkbox {
+  background-color: #398FD0;
+  border: 2px solid #398FD0; }
+
+form.form .weekday input[type="checkbox"]:focus + label.weekday_checkbox {
+  border: 2px solid #398FD0;
+  background-color: #A0A0A0; }
+
+form.form .weekday input[type="checkbox"]:hover + label.weekday_checkbox {
+  border: 2px solid #398FD0; }
+
+form.form .weekday input[type="checkbox"]:checked:focus + label.weekday_checkbox {
+  border: 2px solid #112f46;
+  background-color: #398FD0; }
+
+form.form .weekday .column {
+  display: inline-block; }
 
 form.form textarea {
   min-height: 20vh; }
@@ -1704,6 +1800,18 @@ form.form .weekday, form.form .service {
   position: relative;
   width: 80%;
   margin: auto; }
+
+.lessons-gallery .gallery-wrapper {
+  width: auto;
+  margin-top: 32px; }
+  .lessons-gallery .gallery-wrapper .gallery {
+    margin: 0; }
+  .lessons-gallery .gallery-wrapper .gallery-arrows .arrow.left {
+    margin-left: -50px; }
+  .lessons-gallery .gallery-wrapper .gallery-arrows .arrow.right {
+    margin-right: -50px; }
+  .lessons-gallery .gallery-wrapper .indicators {
+    margin-bottom: 2vh; }
 
 .gallery-arrows {
   position: absolute;
@@ -1842,8 +1950,20 @@ form.form .weekday, form.form .service {
       .image.icon.social:hover {
         transform: scale(1.065); }
 
-.hide {
-  display: none; }
+.instruments {
+  text-align: center;
+  margin-bottom: inherit; }
+  @media (min-width: 767.98px) {
+    .instruments {
+      margin-bottom: 5% !important; } }
+
+.instrument {
+  display: inline-block;
+  margin: 10% 10% 0; }
+  @media (min-width: 767.98px) {
+    .instrument {
+      display: block;
+      margin: inherit; } }
 
 .navigation-container {
   position: fixed;
