@@ -61,7 +61,7 @@
       <section id="intro" class="intro content-fw lessons-bg">
         <div class="text-container">
           <h1>Come Learn With Us</h1>
-          <p>Practice makes perfect, and we are here to help! Fill out our lessons form below to get started with our music lesson services.</p>
+          <p>Practice makes perfect, and we are here to help. Fill out our lessons form below to get started with our music lesson services.</p>
         </div>
         <a href='#scrollTo'>
           <div class="read-more">More Info <img class="arrow" src="img/icons/arrow-more.svg"></div>
@@ -79,8 +79,8 @@
           <p>Guitar</p>
         </div>
         <div class='column is-one-fifth  instrument'>
-          <img class="image icon" src="img/icons/icon_drum.svg" alt=""></img>
-          <p>Drums</p>
+          <img class="image icon" src="img/icons/icon_uke.svg" alt=""></img>
+          <p>Ukulele</p>
         </div>
         <div class='column is-one-fifth  instrument'>
           <img class="image icon" src="img/icons/icon_flute.svg" alt=""></img>
@@ -97,8 +97,8 @@
           <h2>It's Never Too Late to Learn</h2>
         </div>
         <div class="column is-three-fifths">
-          <p class="lead">Maldek is here to empower your musical skills</p>
-          <p>Not ready to record your hit album yet? We’ve got you covered. Fill out our lessons form to get started with one of our music educators and begin your musical journey. We offer lessons for a variety of instruments from people who have been playing music most of their lives. Let us help you become the musician you’ve always wanted to be.</p>
+          <p class="lead">Maldek is here to empower your musical skills.</p>
+          <p>Fill out our lessons form to get started with one of our music educators and begin your musical journey. We offer lessons for a variety of instruments from people who have been playing music most of their lives.</p>
         </div>
         <!-- gallery -->
         <div class ='column is-offset-two-fifths is-three-fifths lessons-gallery'>
@@ -137,21 +137,14 @@
             <div class="card">
               <img src="img/icons/icon_avatar.svg">
               <h3 class="title">Eden Sloop</h3>
-              <p class="label">Piano, Guitar, Flute,<br>Vocal Lessons</p>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <div class="card">
-              <img src="img/icons/icon_avatar.svg">
-              <h3 class="title">Matt Sloop</h3>
-              <p class="label">Drums<br>&nbsp;</p>
+              <p class="label">Piano, Guitar, Flute,<br>Vocals, Ukulele</p>
             </div>
           </a>
           <a href="#" class="card-container">
             <div class="card">
               <img src="img/icons/icon_avatar.svg">
               <h3 class="title">Brian Gluf</h3>
-              <p class="label">Guitar, Saxaphone</p>
+              <p class="label">Guitar, Saxophone<br>&nbsp;</p>
             </div>
           </a>
         </div>
@@ -169,24 +162,24 @@
             <div class="columns is-multiline is-tablet">
               <div class="parent column">
                 <label class="checkbox">
-                  <input type="checkbox" name="is_parent">I am the Parent/Gurdian of the Student.
+                  <input type="checkbox" name="is_notParent">I am seeking lessons for myself.
                 </label>
               </div>
             </div>
             <!-- Name -->
-            <div class="columns form-group form-col-2">
+            <div id="parent" class="columns form-group form-col-2">
               <div class="column">
-                <label for="user_firstName">First Name<span class="required">Required</span></label>
-                <input type="text" name="user_firstName" placeholder="e.g. Jane" required>
+                <label for="user_parentFirstName">Parent/Guardian First Name<span class="required">Required</span></label>
+                <input type="text" name="user_parentFirstName" placeholder="e.g. Jane" required>
                 <div class="error-message">Please enter your first name.</div>
               </div>
               <div class="column">
-                <label for="user_lastName">Last Name<span class="required">Required</span></label>
-                <input type="text" name="user_lastName" placeholder="e.g. Doe" required>
+                <label for="user_parentLastName">Parent/Guardian Last Name<span class="required">Required</span></label>
+                <input type="text" name="user_parentLastName" placeholder="e.g. Doe" required>
                 <div class="error-message">Please enter your last name.</div>
               </div>
             </div>
-            <div id='students' class="columns form-group form-col-2 hide">
+            <div class="columns form-group form-col-2">
               <div class="column">
                 <label for="user_studentFirstName">Student First Name<span class="required">Required</span></label>
                 <input type="text" name="user_studentFirstName" placeholder="e.g. John">
@@ -226,6 +219,7 @@
                   <option disabled value="" selected>Select Instrument</option>
                   <option value="guitar">Guitar</option>
                   <option value="saxaphone">Saxaphone</option>
+                  <option value="vocals">Ukulele</option>
                   <option value="piano">Piano</option>
                   <option value="flute">Flute</option>
                   <option value="vocals">Vocals</option>
@@ -335,7 +329,7 @@
             </div>
             <div class="text">
               <p>Ready to make the jump?</p>
-              <a href="#" class="btn">Record with Us</a>
+              <a href="booking.html" class="btn">Create With Us</a>
             </div>
           </div>
         </div>
@@ -344,7 +338,7 @@
             <div class="contact-info-wrapper">
               <div class="contact-info">
                 <h3>Contact Us</h3>
-                <p><a href="mailto:info@maldekstudios.com">info@maldekstudios.com</a></p>
+                <p><a href="mailto:contact@maldekstudios.com">contact@maldekstudios.com</a></p>
               </div>
             </div>
           </div>
@@ -356,13 +350,13 @@
               <div class="contact-info">
                 <h3>Follow Us</h3>
                 <div class="social-media">
-                  <a href="https://www.facebook.com/maldekstudios/" alt="Facebook – @maldekstudios" title="Facebook – @maldekstudios">
+                  <a href="https://www.facebook.com/maldekstudios/" alt="Facebook – @maldekstudios" title="Facebook – @maldekstudios" target="_blank">
                     <img src="img/icons/social_facebook.svg" class="image icon social">
                   </a>
-                  <a href="https://www.instagram.com/maldekstudios/?hl=en" alt="Instagram – @maldekstudios" title="Instagram – @maldekstudios">
+                  <a href="https://www.instagram.com/maldekstudios/?hl=en" alt="Instagram – @maldekstudios" title="Instagram – @maldekstudios" target="_blank">
                     <img src="img/icons/social_insta.svg" class="image icon social">
                   </a>
-                  <a href="https://twitter.com/maldekstudios" alt="Twitter – @maldekstudios" title="Twitter – @maldekstudios">
+                  <a href="https://twitter.com/maldekstudios" alt="Twitter – @maldekstudios" title="Twitter – @maldekstudios" target="_blank">
                     <img src="img/icons/social_twitter.svg" class="image icon social">
                   </a>
                 </div>

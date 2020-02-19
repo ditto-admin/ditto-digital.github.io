@@ -1299,12 +1299,12 @@ html {
       font-size: 1.3rem; }
       @media (min-width: 767.98px) {
         .intro .text-container p {
-          max-width: 80%;
+          max-width: 75%;
           margin: 0 0 20vh;
           font-size: 1.5rem; } }
       @media (min-width: 1199.98px) {
         .intro .text-container p {
-          max-width: 50%; } }
+          max-width: 60%; } }
   .intro .read-more {
     padding: 12px 12px 24px;
     margin-bottom: 5vh;
@@ -1348,7 +1348,7 @@ html {
   background-image: url("../img/photo/booking_hero_OG.jpg"); }
 
 .lessons-bg {
-  background-image: url("../img/photo/lessons_hero_OG.jpg"); }
+  background-image: url("../img/photo/lessons_hero_dark.jpg"); }
 
 .content {
   width: 90%;
@@ -1615,9 +1615,8 @@ form.form .form-group {
       margin-bottom: 50px; } }
 
 form.form .form-group.hide {
-  height: 0;
   opacity: 0;
-  margin: 0;
+  margin: -64px 0;
   position: relative;
   z-index: -100; }
 
@@ -2164,7 +2163,11 @@ h2 {
   color: #000000;
   letter-spacing: 0.05rem;
   margin: 0 0 32px;
-  text-align: center; }
+  text-align: center;
+  padding-right: 6%; }
+  @media (max-width: 767.98px) {
+    h2 {
+      padding-right: 0; } }
   @media (min-width: 767.98px) {
     h2 {
       margin: 0 0 42px;
@@ -2203,12 +2206,12 @@ p {
       margin: 0 0 24px; } }
 
 p.caption {
-  font-size: .9rem;
+  font-size: 1.2rem;
   margin: 12px 0 24px;
   line-height: 1.4; }
   @media (min-width: 767.98px) {
     p.caption {
-      font-size: 1rem;
+      font-size: 1.3rem;
       margin: 16px 0 42px; } }
 
 p.caption + p.caption {
@@ -2255,6 +2258,9 @@ ul.text-list {
   /* align vertical */
   width: 100%;
   flex: 1; }
+  @media (min-width: 767.98px) {
+    .player {
+      max-width: 90%; } }
   .player .player-playPause {
     margin-right: 24px; }
     .player .player-playPause .player-icon {
@@ -2312,7 +2318,6 @@ ul.text-list {
     display: inline-block;
     height: 54px;
     flex: 1;
-    max-width: 240px;
     position: relative; }
     .player .player-scrubber .scrubber-control {
       height: 100%; }
@@ -2341,7 +2346,8 @@ ul.text-list {
           background-color: #FFFFFF; }
   .player .player-timestamp {
     display: inline-block;
-    margin-left: 24px; }
+    margin-left: 24px;
+    width: 42px; }
     .player .player-timestamp .timestamp-timeleft {
       vertical-align: middle;
       font-size: .9rem; }
@@ -2416,23 +2422,25 @@ ul.text-list {
     letter-spacing: 2px;
     font-size: 1.3rem;
     font-family: "metropolis-extra_bold", Helvetica, Arial, sans-serif;
-    margin: 10px 0 14px; }
+    margin: 10px 0 0; }
   @media (max-width: 767.98px) {
     .sample p {
       margin-bottom: 12px; } }
+  .sample .artist-name {
+    text-transform: none;
+    font-size: 1.1rem;
+    font-family: "metropolis-bold", Helvetica, Arial, sans-serif;
+    letter-spacing: 0px; }
   .sample .actions {
-    display: inline-flex;
-    align-items: center;
+    display: block;
     width: 100%; }
     @media (max-width: 767.98px) {
-      .sample .actions {
-        flex-direction: column;
-        align-items: baseline; }
-        .sample .actions .artist-link {
-          margin-bottom: 24px; } }
+      .sample .actions .artist-link {
+        margin-bottom: 24px; } }
     .sample .actions .artist-link {
-      flex: 1; }
+      margin-top: 14px; }
       .sample .actions .artist-link a {
+        display: inline-block;
         text-transform: uppercase;
         color: #384957;
         font-size: 1rem;
@@ -2442,3 +2450,5 @@ ul.text-list {
         .sample .actions .artist-link a:hover {
           color: #398FD0;
           border-bottom-color: #398FD0; }
+        .sample .actions .artist-link a:not(:first-child) {
+          margin-left: 16px; }
